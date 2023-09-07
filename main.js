@@ -17,21 +17,22 @@ randomize.addEventListener('click', result);
 
 function result() {
   const newStory = storyText
-  const xItem = randomValueFromArray(insertX)
-  const yItem = randomValueFromArray(insertY)
-  const zItem = randomValueFromArray(insertZ)
-  newStory.replaceAll(insertX, xItem)
-  newStory.replaceAll(insertY, yItem)
-  newStory.replaceAll(insertZ, zItem)
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+  newStory.replaceAll(insertX, xItem);
+  newStory.replaceAll(insertY, yItem);
+  newStory.replaceAll(insertZ, zItem);
   if(customName.value !== '') {
     const name = customName.value;
-    newStory.replaceAll("Bob", name)
+    newStory.replaceAll("Bob", name);
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
-
+    const weight = "Math.round(300 * 0.071429) stone";
+    const temperature =  "Math.round((94-32) * (5/9)) centigrade";
+    temperature.replaceAll("94 fahrenheit", temperature);
+    weight.replaceAll("300 pounds", weight);
   }
 
   story.textContent = newStory;
