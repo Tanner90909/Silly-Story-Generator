@@ -25,7 +25,7 @@ function result() {
   newStory = newStory.replaceAll(":insertz:", zItem);
   if(customName.value !== '') {
     var name = customName.value;
-    newStory.replaceAll("Bob", name);
+    newStory = newStory.replaceAll("Bob", name);
   }
 
   if(document.getElementById("uk").checked) {
